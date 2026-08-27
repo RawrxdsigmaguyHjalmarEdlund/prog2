@@ -1,41 +1,29 @@
 import copy
 
 class Bil:
-    def __init__(bil):
-        bil.ägare = ''
-        bil.reg = ''
-        bil.fabrikat = ''
-        bil.årsmodell = ''
-        bil.tjänstevikt = ''
-        bil.motoreffekt = ''
+    def __init__(bil, ägare = '', reg = '', fabrikat = '', årsmodell = '', tjänstevikt = '', motoreffekt = ''):
+        bil.ägare = ägare
+        bil.reg = reg
+        bil.fabrikat = fabrikat
+        bil.årsmodell = årsmodell
+        bil.tjänstevikt = tjänstevikt
+        bil.motoreffekt = motoreffekt
 
 class person:
-    def __init__(self):
-        self.förnamn = ''
-        self.efternamn = '' 
-        self.födelseår = ''
-        self.singel = True
+    def __init__(self, förnamn = '', eftarnamn = '', födelseår = '', singel = True):
+        self.förnamn = förnamn
+        self.efternamn = eftarnamn
+        self.födelseår = födelseår
+        self.singel = singel
 
 
-bil1 = Bil()
-bil1.ägare = person()
+bil1 = Bil(person(), 'CMZ45X', 'BMW', '2022', '1925 kg', '183 Hk')
+
 bil1.ägare.förnamn = 'Robin'
-bil1.reg = 'CMZ45X'
-bil1.fabrikat = 'BMW'
-bil1.årsmodell ='2022'
-bil1.tjänstevikt = '1 925 kg'
-bil1.motoreffekt = '183 Hk'
 
-bil2 = Bil()
-bil2.ägare = person()
+bil2 = Bil(person(), 'TUL37L', 'Audi', '2020', '1930 kg', '204 Hk')
+
 bil2.ägare.förnamn = 'Bobin'
-bil2.reg = 'TUL37L'
-bil2.fabrikat = 'Audi'
-bil2.årsmodell ='2020'
-bil2.tjänstevikt = '1 930 kg.'
-bil2.motoreffekt = '204 Hk'
-
-
 
 print ('Bil 1')
 print (bil1.ägare.förnamn , bil1.reg, bil1.fabrikat, bil1.årsmodell, bil1.tjänstevikt, bil1.motoreffekt)
