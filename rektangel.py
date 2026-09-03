@@ -1,7 +1,5 @@
 class Rektangel:
-    def __init__(self, x, y, höjd, bredd):
-        self.x = x
-        self.y = y
+    def __init__(self, höjd, bredd):
         self.höjd = höjd
         self.bredd = bredd
 
@@ -11,7 +9,15 @@ class Rektangel:
     def omkrets(self):
         return 2 * (self.höjd + self.bredd)
 
-r = Rektangel(10, 20, 5, 8)
+    def set_höjd(self, höjd):
+        self.höjd = höjd
 
-print("Area:", r.area())
-print("Omkrets:", r.omkrets())
+    def visa_info(self):
+        print("self.höjd, self.bredd")
+
+Rektangel1 = Rektangel(3, 4)
+Rektangel1.set_höjd(7)
+
+print(Rektangel1.visa_info())
+print("Area:", Rektangel1.area())
+print("Omkrets:", Rektangel1.omkrets())
