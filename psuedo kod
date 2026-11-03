@@ -1,0 +1,15 @@
+class Spelare:
+	def __init__(self, namn):
+		self.__namn = namn
+		self.__poäng = 0
+
+	def visa_poäng(self):
+		print(self.__poäng)
+
+	def lägg_till_poäng(self):
+		self.__poäng += 1
+
+
+spelare = Spelare("Anna")
+spelare.lägg_till_poäng()
+spelare.visa_poäng()
